@@ -45,7 +45,7 @@ cov=(wall+'<div class="cover-title"><h1 class="sweep">TEXPLORE</h1><h2>2026</h2>
  +'<div class="dept" style="top:44%;font-size:2.55cqw">Department of Computer Science and Engineering</div>'
  +'<div class="h2" style="left:6%;top:59%;font-size:6.2cqw;line-height:1.06;text-shadow:0 .5cqw 2cqw rgba(0,0,0,.6)">Dream big.<br><span style="color:#b9a3ff">Code bold.</span><br><span style="color:#ff6a7d">Innovate.</span></div>'
  +tx(6,82,62,'Turn ideas into technology that changes lives.','p',2.4)
- +'<div class="edn" style="left:50%;top:51.2%">Edition 1 <i>·</i> Apr – Oct 2026</div>')
+ +'<div class="edn" style="left:50%;top:51.2%">Edition  <i>·</i> VOL 13 ISSUE 8</div>')
 P.append(page(1,'front','','I’m Adhi, and I’ll take you through this magazine, one page at a time.||Flip the page whenever you like. I’ll tell you the story of each page, then wait for you.',cov,hard=True,cover=True))
 # 2 HoD
 hod=(H1('From the desk<br>of the HoD',11.5,5.6)
@@ -244,7 +244,7 @@ P.append(page(23,'front','Team','Here are our faculty coordinators and our stude
 p25=('<div class="h1" style="left:6%;top:15%;font-size:10.5cqw;color:#fff;filter:drop-shadow(0 .9cqw 0 #5b1a8f)">Thank<br>you</div>'
  +'<div class="h1" style="left:6%;top:31%;font-size:7.4cqw;background:linear-gradient(180deg,#fff,#ffcf4d 60%,#ff9d00);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 .6cqw 0 #5b1a8f)">TEXPLORE<br>2026</div>'
  +'<div class="h2" style="left:6%;top:48%;font-size:4.2cqw;line-height:1.1">Dream big.<br><span style="color:#b9a3ff">Code bold.</span><br><span style="color:#ff6a7d">Innovate.</span></div>'
- +'<div class="edn" style="left:6%;top:43.6%;transform:none">Edition 1 <i>·</i> Apr – Oct 2026</div>'
+ +'<div class="edn" style="left:6%;top:43.6%;transform:none">Edition <i>·</i> VOL 13 ISSUE 8</div>'
  +'<div class="p" style="left:6%;top:64%;width:60%;font-size:2.4cqw">Department of Computer Science and Engineering<br><b>Rajalakshmi Engineering College</b><br>TEXPLORE 2026</div>'
  +'<div class="chipbig hs" data-go="0" style="left:6%;top:76%;font-size:2.4cqw;cursor:pointer;--r:-2deg" data-t="Back to the cover" data-d="Tap here to start the magazine again." data-c="Page 1" data-pose="wave">Back to cover<small>Click to flip to the start</small></div>')
 P.append(page(24,'front','','Thank you for reading TEXPLORE 2026!',p25,hard=True))
@@ -304,11 +304,16 @@ for i,(k,n,r) in enumerate(ED_N):
     es+=f'<div class="tcard" style="left:{x}%;top:{y}%;width:41%;height:14%"></div>'
     es+=fig(k,x+1.6,y+1.0,14.5,12,None,t=n,d=f'{r}, Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.',c='Faculty Editor',pose=poses[i],rot=0,pos='50% 18%')
     es+=tx(x+18,y+3.0,21.5,f'<b style="font-size:2.3cqw;color:#fff;line-height:1.2;display:block">{n}</b><span style="color:var(--gold);font-weight:700;font-size:1.9cqw;display:block;margin:.5cqw 0">{r}</span><span style="font-size:1.8cqw;opacity:.85">Faculty Editor</span>','p')
+editor_message=(
+ '<b>Dear Readers,</b><br><br>'
+ 'It gives me immense pleasure to present the March–October 2026 edition of <b>TEXPLORE</b>, the magazine of the <b>Department of Computer Science, Rajalakshmi Engineering College</b>.<br><br>'
+ 'TEXPLORE serves as a platform to showcase the achievements, innovative ideas, technical knowledge, and creative talents of our students and faculty members. This edition highlights the department’s activities and accomplishments over the past few months, including industrial visits, Faculty Development Programmes (FDPs), workshops, guest lectures, and other academic and extracurricular initiatives.<br><br>'
+ 'I extend my sincere gratitude to our Head of the Department, <b>Dr. J. Manoranjini</b>, for her constant encouragement, guidance, and unwavering support, which have been instrumental in bringing this edition to life. I also thank all the faculty members and students who have contributed their valuable efforts and creativity to make this magazine a success.<br><br>'
+ 'I hope you enjoy reading TEXPLORE and find it both informative and inspiring. Your valuable feedback and suggestions are always welcome as we strive to make future editions even more engaging and enriching.<br><br>'
+ '<b>Happy Reading!</b>')
 edit=(H1('From the<br>Editors’ Desk',11.5,5.6)+KICK('Faculty editors · TEXPLORE 2026',22)+es
- +'<div class="h1" style="left:6%;top:56.4%;font-size:9cqw;color:var(--gold);opacity:.9;line-height:1">“</div>'
- +tx(14,58.6,80,'<b>Editors’ message.</b> Welcome to TEXPLORE 2026, the first edition of the magazine of the Department of Computer Science and Engineering, covering April to October 2026. In these pages you will find hackathon podiums, a world record, club sessions, faculty programmes and global classrooms. Every photo and every line comes from the people who lived the moments. We thank our Head of the Department, our faculty and our student coordinators, Rohith Kumar S, Sarveshvaran D and Gowtham S, for their time and effort. We hope this issue inspires you to dream big, code bold and innovate.','p',2.0)
- +tx(14,73.5,60,'<i style="font-weight:600;color:rgba(246,241,255,.85)">With warm regards,</i><br><b>The Editorial Team</b>, TEXPLORE 2026','p',2.0))
-EDITOR=page(0,'front','Editors','Here are the faculty editors of TEXPLORE 2026, with their message to you.',edit)
+ +tx(8,56.5,84,editor_message,'p',1.45,'line-height:1.25;'))
+EDITOR=page(0,'front','Editors','A message to our readers from the faculty editors of TEXPLORE 2026.',edit)
 P[1:2]=[ABOUT,P[1],EDITOR]
 assert len(P)==26
 import re as _r2

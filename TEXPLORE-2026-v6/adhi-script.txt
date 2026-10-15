@@ -8,7 +8,7 @@ p2-h0	Best Department Award 2025. The Department of CSE received the Best Depart
 p2-h1	World record. The department organised the world record setting AI Botathon 1000 on 18 July 2026.
 p3-intro0	Page 3. A message from our Head of the Department, Dr. J. Manoranjini, on the department’s year.
 p3-h0	Dr. J. Manoranjini. Head of the Department of Computer Science and Engineering, with a message on the year’s achievements.
-p4-intro0	Page 4. Here are the faculty editors of TEXPLORE 2026, with their message to you.
+p4-intro0	Page 4. A message to our readers from the faculty editors of TEXPLORE 2026.
 p4-h0	Mr. Karthikeyan N. Assistant Professor, Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
 p4-h1	Mr. Balachandar J. Assistant Professor (SS), Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
 p4-h2	Ms. Poornima A. Assistant Professor, Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
