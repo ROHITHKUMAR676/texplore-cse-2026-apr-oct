@@ -36,7 +36,7 @@ def page(n,sec,tag,intro,inner,hard=False,cover=False):
 def H1(txt,y=11.5,size=6,x=6,w=88,cls='h1'): return f'<div class="{cls}" style="left:{x}%;top:{y}%;width:{w}%;font-size:{size}cqw">{txt}</div>'
 def KICK(txt,y,x=6,w=88): return f'<div class="kick" style="left:{x}%;top:{y}%;width:{w}%">{txt}</div>'
 P=[]
-CONN=['Let’s start with this one. ','Now, look at this. ','Over here, ','And then there’s this. ','Oh, and ','Don’t miss this. ']
+CONN=['']
 # 1 cover
 TILES=['resonance', 'mule1', 'iwdc', 'vig2', 'kba3', 'fdp2', 'chd1', 'xyntra', 'wr1', 'iv1', 'techdecks', 'im3', 'gdg2', 'bestdept', 'nexora', 'fdp1', 'ind1', 'iccds2', 'mule2', 'vig1', 'chd2', 'gl1', 'powerbi', 'iv4', 'glitches2', 'wr5', 'iccds3', 'ind2', 'kba2', 'fdp4']
 SPAN={3:'t2',9:'w2',14:'t2',20:'t2',26:'w2'}

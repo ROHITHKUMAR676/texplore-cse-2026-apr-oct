@@ -1,5 +1,5 @@
 import re, html, sys, json
-src=open(sys.argv[1]).read(); out=sys.argv[2]
+src=open(sys.argv[1],encoding='utf-8').read(); out=sys.argv[2]
 conn=json.loads(re.search(r'ADHI_CONN=(\[.*?\]);',src).group(1))
 pages=re.split(r'<div class="pg sec-',src)[1:]
 lines=['ADHI VOICE SCRIPT — every line Adhi says, with the file name to use if you record/generate your own audio.',
@@ -14,4 +14,4 @@ for pg in pages:
         t,d=html.unescape(m.group(1)),html.unescape(m.group(2))
         lines.append(f'p{n}-h{k}\t{conn[k%len(conn)]}{t}. {d}')
 lines.append('next-prompt\tFlip the page, and I’ll tell you about the next one!')
-open(out,'w').write('\n'.join(lines)+'\n'); print(len(lines))
+open(out,'w',encoding='utf-8').write('\n'.join(lines)+'\n'); print(len(lines))

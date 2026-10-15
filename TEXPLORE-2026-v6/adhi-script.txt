@@ -3,112 +3,118 @@ Save each as audio/<ID>.mp3, then set window.ADHI_AUDIO=true in index.html (see 
 
 p1-intro0	Hi there! I’m Adhi, and I’ll take you through this magazine, one page at a time.
 p1-intro1	Flip the page whenever you like. I’ll tell you the story of each page, then wait for you.
-p2-intro0	Page 2. A message from our Head of the Department, Dr. J. Manoranjini, on the department’s year.
-p2-h0	Let’s start with this one. Dr. J. Manoranjini. Head of the Department of Computer Science and Engineering, with a message on the year’s achievements.
-p3-intro0	Page 3. Tap any line to jump to that page.
-p4-intro0	Page 4. Our students have been busy winning. Tap a photo and I will show you the highlights.
-p4-intro1	From design-thinking contests to national hackathons, our students competed across the country this year. Here is what they brought home.
-p4-h0	Let’s start with this one. Keerthana M G wins 1st Prize. First prize at the IWDC InnovateHer competition conducted at REC.
-p4-h1	Now, look at this. Glitches take the 1st prize. 1st prize at the 3rd Project Contest for Design Thinking and Innovation 2025.
-p4-h2	Over here, The winning moment. The Glitches team with their prize books at the Design Thinking contest.
-p5-intro0	Page 5. Fests and hackathons. Tap a photo for the story behind it.
-p5-intro1	Our students do not just compete, they build: websites, tech fests and 36-hour hackathons run for the whole campus.
-p5-h0	Let’s start with this one. The Recharge website. Vignesh, a third-year CS student, built the Recharge website for the college’s cultural fest.
-p5-h1	Now, look at this. TechDecks: runner-up. Runner-up at the HappyFox Hackathon on the theme Campus Connect, 24 Feb 2025.
-p5-h2	Over here, Resonance’25 tech fest. Intellexa’s flagship fest: Cyber Quest, DSA Battle, Database Design Duel and more.
-p5-h3	And then there’s this. Xyntra’25: 36 hours. IEEE Computer Society REC’s 36-hour national-level hackathon.
-p6-intro0	Page 6. A special mention among 750+ teams. Tap the poster!
-p6-intro1	Also: Top 10 at the AICCI National Startup Summit 2026 and 13th at CIH Hackathon’26 (Sam Devaraja J, Saiprashanth V, Vishal S, Thivyaa P).
-p6-h0	Let’s start with this one. Special Prize at TN-IMPACT. Our team stood out among 750+ teams at Tamil Nadu’s largest industrial hackathon.
-p6-h1	Now, look at this. Making the news. A Tamil newspaper clipping from the department’s achievements file.
-p7-intro0	Page 7. A podium finish at the Chandigarh Police Hackathon.
-p7-intro1	Team: Raghavan S, Mymoon Beevi, Prajeet V and Prajith S from CSE. Prize: ₹50,000 cash award plus a ₹5,000 Best Performance Award for every member. Hosted by Chandigarh Police with UIET, Panjab University.
-p7-h0	Let’s start with this one. 3rd place, ₹50,000. Raghavan S, Mymoon Beevi, Prajeet V and Prajith S secured 3rd place, with a ₹50,000 cash prize and a ₹5,000 Best Performance Award for every team member.
-p7-h1	Now, look at this. The team with their trophy. Trophy, certificate and cheque in hand after the hackathon.
-p8-intro0	Page 8. Mule Scanner AI took first place. Tap the photos!
-p8-h0	Let’s start with this one. Mule Scanner AI on stage. Presented at VIT Chennai as part of the PSBs Hackathon Series 2026, an initiative of the Ministry of Finance, the Department of Financial Services and the Indian Banks’ Association.
-p8-h1	Now, look at this. 1st place at IntelliTrace. Participated on 7 April 2026 and was announced the winner on 8 July 2026, taking home a cash prize of ₹2.5 lakhs.
-p9-intro0	Page 9. Vigil-X won the BUILD TO CARE finals.
-p9-h0	Let’s start with this one. Vigil-X wins 1st place. Winner of the BUILD TO CARE 2026 hackathon finals, announced on 9 October 2026.
-p9-h1	Now, look at this. The crowd goes wild. Our students competed in the finals on 8–9 October at SRM Kattankulathur.
-p9-h2	Over here, Finalists with certificates. Certificates and finalist badges from the Acentra Health Hackathon.
-p10-intro0	Page 10. More wins, more trophies. Tap a photo.
-p10-intro1	Project Excellence Award in two categories at Robovanta’26 (Pixor Robotics, Dindigul) for Sam Devaraja J, and 2nd place at a 6-hour hackathon at SA College of Engineering for Monisha S.
-p10-intro2	Two more podiums on this page. Designathon 2026 at SRM, third place for Team Intelliroute. And a first place at our own twenty four hour hackathon here at R E C. The full record of every achievement is one tap away.
-p10-h0	Let’s start with this one. Grand Finale, PSBs 2026. The awards ceremony of the IntelliTrace hackathon at VIT Chennai.
-p10-h1	Now, look at this. NEXORA 24-hour hackathon. HackHere’s overnight hackathon, 22–23 August 2026 at SNS iNnovation Hub, Coimbatore.
-p11-intro0	Page 11. Club life: the Kerala Blockchain Academy Club at REC.
-p11-h0	Let’s start with this one. The club is inaugurated. KBAIC was inaugurated on 19 September 2025 with the CSE department.
-p11-h1	Now, look at this. Unlocking the future of blockchain. The inauguration poster for the REC–Kerala Blockchain Innovation club.
-p11-h2	Over here, Our blockchain community. Students and mentors at REC Tech Lounge.
-p11-h3	And then there’s this. Faculty Empowerment Conclave. Kerala Blockchain Academy, IIITMK, Technopark, 20 Sep 2025.
-p12-intro0	Page 12. DEVS club sessions. Tap a poster.
-p12-h0	Let’s start with this one. Hacktivate: hackathons unplugged. SIH winners share real experiences, real wins, real learning. 20 Jan on Google Meet.
-p12-h1	Now, look at this. Project to Production. Git and GitHub, deploying web, mobile and AI/ML projects. 26 Jan on Google Meet.
-p13-intro0	Page 13. Intellexa and the Google Developer’s Club. Tap a photo.
-p13-h0	Let’s start with this one. Intellexa REC newsletter. Photography, prompts and ML
-p13-h1	Now, look at this. Road to SIH. Road to SIH
-p13-h2	Over here, A packed hall. Full house
-p13-h3	And then there’s this. Club members. The GDG team
-p14-intro0	Page 14. Our faculty set the pace. Tap the certificate.
-p14-intro1	Dr. V. Karthick was recognised at College Day 2026 for commendable overall performance in teaching, evaluation, research, publication and other professional pursuits (2025–26).
-p14-h0	Let’s start with this one. Dr. V. Karthick: Faculty of the Year. Recognised for teaching, evaluation, research and publication.
-p14-h1	Now, look at this. Faculty learn Agentic AI. Empowering faculty to build the next generation of autonomous AI systems, by the TCS CoE in AI.
-p15-intro0	Page 15. Faculty empowerment programmes. Tap a photo.
-p15-h0	Let’s start with this one. GenAI and Applied AI, with HCL GUVI. Faculty programme on Generative AI and Applied AI, 22–24 June 2026.
-p15-h1	Now, look at this. The faculty cohort. Faculty gathered at ANEW101 for three days of Generative AI and Applied AI, organised with HCL GUVI and the Institution’s Innovation Council.
-p15-h2	Over here, Mastering OOP with Java. A five-day faculty development programme, 24 to 28 June 2025, coordinated by Dr. V. Masilamani of IIITDM and sponsored by the Institution’s Innovation Council.
-p16-intro0	Page 16. This corner is waiting for sports photos and results.
-p16-h0	Let’s start with this one. Sports corner. No sports content was in the source deck, so this page is reserved for photos and results.
-p17-intro0	Page 17. Our department, our wins. Tap a photo.
-p17-intro1	Highlights of the year: the Best Department Award 2025, a World Records Union world record, and 133+ blockchain certificates completed in Season 1 of the Upskill series by the CoE in Blockchain Technology.
-p17-h0	Let’s start with this one. Best Department Award 2025. The Department of CSE received the Best Department Award at Annual College Day.
-p17-h1	Now, look at this. Industry interaction. Industry meets campus
-p17-h2	Over here, Industry interaction. Talking shop
-p18-intro0	Page 18. Let me tell you about the world record!
-p18-h0	Let’s start with this one. A record-setting day. The department organised the world record setting AI Botathon 1000.
-p18-h1	Now, look at this. AI Nexus poster. AI Nexus 2026
-p18-h2	Over here, Botathon 1000. Agentic AI Botathon 1000
-p19-intro0	Page 19. 1000 students, 1000 bots, 120 minutes.
-p19-h0	Let’s start with this one. Record certified. Highest number of fully functional Agentic AI bots developed simultaneously within two hours.
-p19-h1	Now, look at this. We coded. We tested. We built.. Every bot built independently
-p19-h2	Over here, 1000 students. Computing students took part in the record attempt.
-p19-h3	And then there’s this. 1000 bots. Every bot was built, tested and submitted independently.
-p19-h4	Oh, and 120 minutes. All bots were developed within a continuous 120 minutes.
-p20-intro0	Page 20. Conferences and a guest lecture from abroad.
-p20-h0	Let’s start with this one. ICCDS 2025. The 2nd IEEE International Conference on Computing and Data Science, 24 July 2025.
-p20-h1	Now, look at this. Conference in session. Delegates and chief guests at ICCDS 2025.
-p20-h2	Over here, Audience. The audience
-p20-h3	And then there’s this. Chief guest. Chief guest
-p20-h4	Oh, and International guest lecture. 20 Jan 2026, with the Centre of Excellence in Blockchain Technology.
-p21-intro0	Page 21. Four workshops, four posters. Tap one.
-p21-h0	Let’s start with this one. GenAI &amp; Agentic AI for cyber security. A value-added course, 18–25 Aug 2026, by CSE and CSE (Cyber Security).
-p21-h1	Now, look at this. Autonomous enterprise agents. Agentic AI with UiPath, with the TCS AI CoE, 11–17 Aug 2026.
-p21-h2	Over here, Deploying AI at the Edge. A hands-on edge AI workshop, from development to deployment, on 27 July 2026, with Ramesh N, AI developer at Altsense.
-p21-h3	And then there’s this. AWS Cloud Launchpad. Zero to deployment on AWS on 10 August 2026, led by Jayanesh D and Vijay Kumar V, programmer analysts at Cognizant.
-p22-intro0	Page 22. Industrial visits. Tap a photo.
-p22-intro1	Visits to IIITDM Kanchipuram and IITM Research Park gave our students first-hand exposure to labs, research and industry.
-p22-h0	Let’s start with this one. III-year at IIITDM Kanchipuram. Third-year students toured IIITDM on 15 September 2026.
-p22-h1	Now, look at this. Lab visit. Hands-on in the lab
-p22-h2	Over here, Group photo. Group photo
-p22-h3	And then there’s this. IITM Research Park. IITM Research Park
-p22-h4	Oh, and Talk. An industry talk
-p22-h5	Don’t miss this. Batch. The II-year batch
-p23-intro0	Page 23. Global classrooms. Tap a poster.
-p23-h0	Let’s start with this one. Robots and memory with Sunway. Online sessions with Sunway University Malaysia on 11 Sep and 7 Oct 2026.
-p23-h1	Now, look at this. Co-lecturing with ASU. Two days of co-lecturing with ASU faculty, 8–9 October 2026.
-p23-h2	Over here, Data with UAG Mexico. Database design and data analysis sessions on 1 and 5 October 2026.
-p23-h3	And then there’s this. Immersion. Code. Create. Connect.
-p23-h4	Oh, and Hands-on. Hands-on learning
-p23-h5	Don’t miss this. Welcome. Welcome to REC
-p24-intro0	Page 24. Here are our faculty coordinators and our student coordinators. Tap a photo and I will introduce them.
-p24-h0	Let’s start with this one. Mr. Karthikeyan N. Assistant Professor, Department of Computer Science and Engineering, and one of our faculty coordinators.
-p24-h1	Now, look at this. Mr. Balachandar J. Assistant Professor (SS), Department of Computer Science and Engineering, and one of our faculty coordinators.
-p24-h2	Over here, Ms. Poornima A. Assistant Professor, Department of Computer Science and Engineering, and one of our faculty coordinators.
-p24-h3	And then there’s this. Ms. Jayapradha. Assistant Professor (SS), Department of Computer Science and Engineering, and one of our faculty coordinators.
-p24-h4	Oh, and Rohith Kumar S. Student coordinator for TEXPLORE 2026.
-p24-h5	Don’t miss this. Sarveshvaran D. Student coordinator for TEXPLORE 2026.
-p24-h6	Let’s start with this one. Gowtham S. Student coordinator for TEXPLORE 2026.
-p25-intro0	Page 25. Thank you for reading TEXPLORE 2026!
-p25-h0	Let’s start with this one. Back to the cover. Tap here to start the magazine again.
+p2-intro0	Page 2. Let me introduce the Department of Computer Science and Engineering at Rajalakshmi Engineering College, the team behind this magazine.
+p2-h0	Best Department Award 2025. The Department of CSE received the Best Department Award at Annual College Day.
+p2-h1	World record. The department organised the world record setting AI Botathon 1000 on 18 July 2026.
+p3-intro0	Page 3. A message from our Head of the Department, Dr. J. Manoranjini, on the department’s year.
+p3-h0	Dr. J. Manoranjini. Head of the Department of Computer Science and Engineering, with a message on the year’s achievements.
+p4-intro0	Page 4. Here are the faculty editors of TEXPLORE 2026, with their message to you.
+p4-h0	Mr. Karthikeyan N. Assistant Professor, Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
+p4-h1	Mr. Balachandar J. Assistant Professor (SS), Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
+p4-h2	Ms. Poornima A. Assistant Professor, Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
+p4-h3	Ms. Jayapradha. Assistant Professor (SS), Department of Computer Science and Engineering, and one of the faculty editors of TEXPLORE 2026.
+p5-intro0	Page 5. Tap any line to jump to that page.
+p6-intro0	Page 6. Our students have been busy winning. Tap a photo and I will show you the highlights.
+p6-intro1	From design-thinking contests to national hackathons, our students competed across the country this year. Here is what they brought home.
+p6-h0	Keerthana M G wins 1st Prize. First prize at the IWDC InnovateHer competition conducted at REC.
+p6-h1	Glitches take the 1st prize. 1st prize at the 3rd Project Contest for Design Thinking and Innovation 2025.
+p6-h2	The winning moment. The Glitches team with their prize books at the Design Thinking contest.
+p7-intro0	Page 7. Fests and hackathons. Tap a photo for the story behind it.
+p7-intro1	Fests, hackathons &amp; firsts. Our students do not just compete, they build: websites, tech fests and 36-hour hackathons run for the whole campus.
+p7-h0	The Recharge website. Vignesh, a third-year CS student, built the Recharge website for the college’s cultural fest.
+p7-h1	TechDecks: runner-up. Runner-up at the HappyFox Hackathon on the theme Campus Connect, 24 Feb 2025.
+p7-h2	Resonance’25 tech fest. Intellexa’s flagship fest: Cyber Quest, DSA Battle, Database Design Duel and more.
+p7-h3	Xyntra’25: 36 hours. IEEE Computer Society REC’s 36-hour national-level hackathon.
+p8-intro0	Page 8. A special mention among 750+ teams. Tap the poster!
+p8-intro1	Also: Top 10 at the AICCI National Startup Summit 2026 and 13th at CIH Hackathon’26 (Sam Devaraja J, Saiprashanth V, Vishal S, Thivyaa P).
+p8-h0	Special Prize at TN-IMPACT. Our team stood out among 750+ teams at Tamil Nadu’s largest industrial hackathon.
+p8-h1	Making the news. A Tamil newspaper clipping from the department’s achievements file.
+p9-intro0	Page 9. A podium finish at the Chandigarh Police Hackathon.
+p9-intro1	Team: Raghavan S, Mymoon Beevi, Prajeet V and Prajith S from CSE. Prize: ₹50,000 cash award plus a ₹5,000 Best Performance Award for every member. Hosted by Chandigarh Police with UIET, Panjab University.
+p9-h0	3rd place, ₹50,000. Raghavan S, Mymoon Beevi, Prajeet V and Prajith S secured 3rd place, with a ₹50,000 cash prize and a ₹5,000 Best Performance Award for every team member.
+p9-h1	The team with their trophy. Trophy, certificate and cheque in hand after the hackathon.
+p10-intro0	Page 10. Mule Scanner AI took first place. Tap the photos!
+p10-h0	Mule Scanner AI on stage. Presented at VIT Chennai as part of the PSBs Hackathon Series 2026, an initiative of the Ministry of Finance, the Department of Financial Services and the Indian Banks’ Association.
+p10-h1	1st place at IntelliTrace. Participated on 7 April 2026 and was announced the winner on 8 July 2026, taking home a cash prize of ₹2.5 lakhs.
+p11-intro0	Page 11. Vigil-X won the BUILD TO CARE finals.
+p11-h0	Vigil-X wins 1st place. Winner of the BUILD TO CARE 2026 hackathon finals, announced on 9 October 2026.
+p11-h1	The crowd goes wild. Our students competed in the finals on 8–9 October at SRM Kattankulathur.
+p11-h2	Finalists with certificates. Certificates and finalist badges from the Acentra Health Hackathon.
+p12-intro0	Page 12. More wins, more trophies. Tap a photo.
+p12-intro1	Project Excellence Award in two categories at Robovanta’26 (Pixor Robotics, Dindigul) for Sam Devaraja J, and 2nd place at a 6-hour hackathon at SA College of Engineering for Monisha S.
+p12-intro2	Two more podiums on this page. Designathon 2026 at SRM, third place for Team Intelliroute. And a first place at our own twenty four hour hackathon here at R E C. The full record of every achievement is one tap away.
+p12-h0	Grand Finale, PSBs 2026. The awards ceremony of the IntelliTrace hackathon at VIT Chennai.
+p12-h1	NEXORA 24-hour hackathon. HackHere’s overnight hackathon, 22–23 August 2026 at SNS iNnovation Hub, Coimbatore.
+p13-intro0	Page 13. Club life: the Kerala Blockchain Academy Club at REC.
+p13-h0	The club is inaugurated. KBAIC was inaugurated on 19 September 2025 with the CSE department.
+p13-h1	Unlocking the future of blockchain. The inauguration poster for the REC–Kerala Blockchain Innovation club.
+p13-h2	Our blockchain community. Students and mentors at REC Tech Lounge.
+p13-h3	Faculty Empowerment Conclave. Kerala Blockchain Academy, IIITMK, Technopark, 20 Sep 2025.
+p14-intro0	Page 14. DEVS club sessions. Tap a poster.
+p14-h0	Hacktivate: hackathons unplugged. SIH winners share real experiences, real wins, real learning. 20 Jan on Google Meet.
+p14-h1	Project to Production. Git and GitHub, deploying web, mobile and AI/ML projects. 26 Jan on Google Meet.
+p15-intro0	Page 15. Intellexa and the Google Developer’s Club. Tap a photo.
+p15-h0	Intellexa REC newsletter. Photography, prompts and ML
+p15-h1	Road to SIH. Road to SIH
+p15-h2	A packed hall. Full house
+p15-h3	Club members. The GDG team
+p16-intro0	Page 16. Our faculty set the pace. Tap the certificate.
+p16-intro1	Dr. V. Karthick was recognised at College Day 2026 for commendable overall performance in teaching, evaluation, research, publication and other professional pursuits (2025–26).
+p16-h0	Dr. V. Karthick: Faculty of the Year. Recognised for teaching, evaluation, research and publication.
+p16-h1	Faculty learn Agentic AI. Empowering faculty to build the next generation of autonomous AI systems, by the TCS CoE in AI.
+p17-intro0	Page 17. Faculty empowerment programmes. Tap a photo.
+p17-h0	GenAI and Applied AI, with HCL GUVI. Faculty programme on Generative AI and Applied AI, 22–24 June 2026.
+p17-h1	The faculty cohort. Faculty gathered at ANEW101 for three days of Generative AI and Applied AI, organised with HCL GUVI and the Institution’s Innovation Council.
+p17-h2	Mastering OOP with Java. A five-day faculty development programme, 24 to 28 June 2025, coordinated by Dr. V. Masilamani of IIITDM and sponsored by the Institution’s Innovation Council.
+p18-intro0	Page 18. Our department, our wins. Tap a photo.
+p18-intro1	Highlights of the year: the Best Department Award 2025, a World Records Union world record, and 133+ blockchain certificates completed in Season 1 of the Upskill series by the CoE in Blockchain Technology.
+p18-h0	Best Department Award 2025. The Department of CSE received the Best Department Award at Annual College Day.
+p18-h1	Industry interaction. Industry meets campus
+p18-h2	Industry interaction. Talking shop
+p19-intro0	Page 19. Let me tell you about the world record!
+p19-h0	A record-setting day. The department organised the world record setting AI Botathon 1000.
+p19-h1	AI Nexus poster. AI Nexus 2026
+p19-h2	Botathon 1000. Agentic AI Botathon 1000
+p20-intro0	Page 20. 1000 students, 1000 bots, 120 minutes.
+p20-h0	Record certified. Highest number of fully functional Agentic AI bots developed simultaneously within two hours.
+p20-h1	We coded. We tested. We built.. Every bot built independently
+p20-h2	1000 students. Computing students took part in the record attempt.
+p20-h3	1000 bots. Every bot was built, tested and submitted independently.
+p20-h4	120 minutes. All bots were developed within a continuous 120 minutes.
+p21-intro0	Page 21. Conferences and a guest lecture from abroad.
+p21-h0	ICCDS 2025. The 2nd IEEE International Conference on Computing and Data Science, 24 July 2025.
+p21-h1	Conference in session. Delegates and chief guests at ICCDS 2025.
+p21-h2	Audience. The audience
+p21-h3	Chief guest. Chief guest
+p21-h4	International guest lecture. 20 Jan 2026, with the Centre of Excellence in Blockchain Technology.
+p22-intro0	Page 22. Four workshops, four posters. Tap one.
+p22-h0	GenAI &amp; Agentic AI for cyber security. A value-added course, 18–25 Aug 2026, by CSE and CSE (Cyber Security).
+p22-h1	Autonomous enterprise agents. Agentic AI with UiPath, with the TCS AI CoE, 11–17 Aug 2026.
+p22-h2	Deploying AI at the Edge. A hands-on edge AI workshop, from development to deployment, on 27 July 2026, with Ramesh N, AI developer at Altsense.
+p22-h3	AWS Cloud Launchpad. Zero to deployment on AWS on 10 August 2026, led by Jayanesh D and Vijay Kumar V, programmer analysts at Cognizant.
+p23-intro0	Page 23. Industrial visits. Tap a photo.
+p23-intro1	Visits to IIITDM Kanchipuram and IITM Research Park gave our students first-hand exposure to labs, research and industry.
+p23-h0	III-year at IIITDM Kanchipuram. Third-year students toured IIITDM on 15 September 2026.
+p23-h1	Lab visit. Hands-on in the lab
+p23-h2	Group photo. Group photo
+p23-h3	IITM Research Park. IITM Research Park
+p23-h4	Talk. An industry talk
+p23-h5	Batch. The II-year batch
+p24-intro0	Page 24. Global classrooms. Tap a poster.
+p24-h0	Robots and memory with Sunway. Online sessions with Sunway University Malaysia on 11 Sep and 7 Oct 2026.
+p24-h1	Co-lecturing with ASU. Two days of co-lecturing with ASU faculty, 8–9 October 2026.
+p24-h2	Data with UAG Mexico. Database design and data analysis sessions on 1 and 5 October 2026.
+p24-h3	Immersion. Code. Create. Connect.
+p24-h4	Hands-on. Hands-on learning
+p24-h5	Welcome. Welcome to REC
+p25-intro0	Page 25. Here are our faculty coordinators and our student coordinators. Tap a photo and I will introduce them.
+p25-h0	Mr. Karthikeyan N. Assistant Professor, Department of Computer Science and Engineering, and one of our faculty coordinators.
+p25-h1	Mr. Balachandar J. Assistant Professor (SS), Department of Computer Science and Engineering, and one of our faculty coordinators.
+p25-h2	Ms. Poornima A. Assistant Professor, Department of Computer Science and Engineering, and one of our faculty coordinators.
+p25-h3	Ms. Jayapradha. Assistant Professor (SS), Department of Computer Science and Engineering, and one of our faculty coordinators.
+p25-h4	Rohith Kumar S. Student coordinator for TEXPLORE 2026.
+p25-h5	Sarveshvaran D. Student coordinator for TEXPLORE 2026.
+p25-h6	Gowtham S. Student coordinator for TEXPLORE 2026.
+p26-intro0	Page 26. Thank you for reading TEXPLORE 2026!
+p26-h0	Back to the cover. Tap here to start the magazine again.
 next-prompt	Flip the page, and I’ll tell you about the next one!
