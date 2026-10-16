@@ -68,14 +68,120 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const rt=s=>Math.max(3300,Math.min(7600,1900+(s||'').length*55));
 let introMusicDone=Promise.resolve();
 function playIntroMusic(){
-  const Ctx=window.AudioContext||window.webkitAudioContext;if(!Ctx)return new Promise(r=>setTimeout(r,10000));
-  let ctx;try{ctx=new Ctx()}catch(e){return Promise.resolve()}
-  const now=ctx.currentTime,master=ctx.createGain(),filter=ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=900;filter.Q.value=.35;master.gain.setValueAtTime(.0001,now);master.gain.linearRampToValueAtTime(.72,now+.9);master.gain.setValueAtTime(.72,now+9.1);master.gain.exponentialRampToValueAtTime(.0001,now+9.95);filter.connect(master);master.connect(ctx.destination);ctx.resume().catch(()=>{});
-  const chords=[[130.81,164.81,196,246.94],[110,130.81,164.81,196],[87.31,110,130.81,164.81],[98,146.83,196,220]];
-  chords.forEach((notes,index)=>notes.forEach((hz,note)=>{
-    const at=now+index*2.35,osc=ctx.createOscillator(),warm=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=hz;warm.type='sine';warm.frequency.value=hz*2;gain.gain.setValueAtTime(.0001,at);gain.gain.linearRampToValueAtTime(note === 0 ? .014 : .009,at+.8);gain.gain.setValueAtTime(note === 0 ? .014 : .009,at+2.35);gain.gain.exponentialRampToValueAtTime(.0001,at+3.05);osc.connect(gain);warm.connect(gain);gain.connect(filter);osc.start(at);warm.start(at);osc.stop(at+3.1);warm.stop(at+3.1);
-  }));
-  return new Promise(resolve=>setTimeout(()=>{ctx.close().catch(()=>{});resolve()},10000));
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  if(!Ctx) return new Promise(r => setTimeout(r, 10000));
+  let ctx;
+  try { ctx = new Ctx(); } catch(e) { return Promise.resolve(); }
+  ctx.resume().catch(()=>{});
+
+  const now = ctx.currentTime + 0.05;
+  const BAR = 2.35;
+
+  // ---- Master chain: soft compressor -> out, with fade in/out ----
+  const master = ctx.createGain();
+  master.gain.setValueAtTime(0.0001, now);
+  master.gain.linearRampToValueAtTime(1.15, now + 1.2);
+  master.gain.setValueAtTime(1.15, now + 8.9);
+  master.gain.exponentialRampToValueAtTime(0.0001, now + 9.95);
+  const comp = ctx.createDynamicsCompressor();
+  comp.threshold.value = -20; comp.ratio.value = 3; comp.attack.value = 0.02; comp.release.value = 0.4;
+  master.connect(comp); comp.connect(ctx.destination);
+
+  // ---- Reverb (generated impulse response, no files needed) ----
+  const irLen = ctx.sampleRate * 3.2;
+  const ir = ctx.createBuffer(2, irLen, ctx.sampleRate);
+  for(let c = 0; c < 2; c++){
+    const d = ir.getChannelData(c);
+    for(let i = 0; i < irLen; i++) d[i] = (Math.random()*2-1) * Math.pow(1 - i/irLen, 2.6);
+  }
+  const reverb = ctx.createConvolver(); reverb.buffer = ir;
+  const wet = ctx.createGain(); wet.gain.value = 0.55;
+  const dry = ctx.createGain(); dry.gain.value = 0.8;
+  const mix = ctx.createGain();
+  mix.connect(dry); dry.connect(master);
+  mix.connect(reverb); reverb.connect(wet); wet.connect(master);
+
+  // ---- Pad bus with slow, breathing low-pass sweep ----
+  const padFilter = ctx.createBiquadFilter();
+  padFilter.type = 'lowpass'; padFilter.Q.value = 0.4;
+  padFilter.frequency.setValueAtTime(600, now);
+  padFilter.frequency.linearRampToValueAtTime(1500, now + 5);
+  padFilter.frequency.linearRampToValueAtTime(900, now + 9.5);
+  padFilter.connect(mix);
+
+  const panner = (p) => {
+    if(!ctx.createStereoPanner) return null;
+    const n = ctx.createStereoPanner(); n.pan.value = p; return n;
+  };
+
+  // ---- Warm pad: two slightly detuned oscillators per note ----
+  function pad(hz, at, len, vol){
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.linearRampToValueAtTime(vol, at + 0.9);
+    g.gain.setValueAtTime(vol, at + len - 0.2);
+    g.gain.exponentialRampToValueAtTime(0.0001, at + len + 0.9);
+    [-7, 7].forEach((cents, i) => {
+      const o = ctx.createOscillator();
+      o.type = i ? 'triangle' : 'sine';
+      o.frequency.value = hz; o.detune.value = cents;
+      o.connect(g); o.start(at); o.stop(at + len + 1);
+    });
+    g.connect(padFilter);
+  }
+
+  // ---- Soft sub bass ----
+  function bass(hz, at, len){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine'; o.frequency.value = hz;
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.linearRampToValueAtTime(0.12, at + 0.5);
+    g.gain.exponentialRampToValueAtTime(0.0001, at + len);
+    o.connect(g); g.connect(master); o.start(at); o.stop(at + len + 0.1);
+  }
+
+  // ---- Melody: gentle bell / music-box pluck ----
+  function bell(hz, at, vol, pan){
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.linearRampToValueAtTime(vol, at + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, at + 2.2);
+    const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g2 = ctx.createGain();
+    o1.type = 'sine'; o1.frequency.value = hz;
+    o2.type = 'sine'; o2.frequency.value = hz * 2.005; g2.gain.value = 0.18; // shimmer overtone
+    o1.connect(g); o2.connect(g2); g2.connect(g);
+    const p = panner(pan);
+    if(p){ g.connect(p); p.connect(mix); } else { g.connect(mix); }
+    o1.start(at); o2.start(at); o1.stop(at + 2.3); o2.stop(at + 2.3);
+  }
+
+  // Chords: Cmaj7 -> Am7 -> Fmaj7 -> G6 (calm, hopeful)
+  const chords = [
+    [130.81, 164.81, 196.00, 246.94],
+    [110.00, 130.81, 164.81, 196.00],
+    [ 87.31, 110.00, 130.81, 164.81],
+    [ 98.00, 146.83, 196.00, 220.00]
+  ];
+  chords.forEach((notes, i) => {
+    const at = now + i * BAR;
+    notes.forEach((hz, n) => {
+      pad(hz, at, BAR, n === 0 ? 0.040 : 0.027);
+      pad(hz * 2, at + 0.05, BAR, 0.011); // airy octave above
+    });
+    bass(notes[0] / 2, at, BAR + 0.4);
+  });
+
+  // Melody (C pentatonic-ish), [bar, offset, Hz, volume, pan]
+  const melody = [
+    [0, 0.35, 659.25, 0.075, -0.3], [0, 0.95, 783.99, 0.063,  0.2], [0, 1.60, 1046.5, 0.069, -0.1],
+    [1, 0.35, 880.00, 0.075,  0.3], [1, 0.95, 1046.5, 0.063, -0.2], [1, 1.60, 1318.5, 0.056,  0.25],
+    [2, 0.35, 880.00, 0.075, -0.25],[2, 0.95, 1046.5, 0.063, 0.15], [2, 1.60, 880.00, 0.056, -0.1],
+    [3, 0.35, 1174.7, 0.069,  0.2], [3, 0.95, 987.77, 0.063, -0.2], [3, 1.60, 783.99, 0.063,  0.1],
+    [3, 2.10, 1046.5, 0.050,  0.0] // soft resolve into the fade
+  ];
+  melody.forEach(([bar, off, hz, vol, pan]) => bell(hz, now + bar * BAR + off, vol, pan));
+
+  return new Promise(resolve => setTimeout(() => { ctx.close().catch(()=>{}); resolve(); }, 10000));
 }
 function mk(pg){
   const st={pg,m:$('.mascot',pg),b:$('.bubble',pg),hs:$$('.hs',pg),i:-1,pt:null,mt:null};
