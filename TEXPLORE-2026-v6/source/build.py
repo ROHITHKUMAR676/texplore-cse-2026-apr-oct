@@ -372,7 +372,7 @@ body=('<div id="stage"></div>'+SHEETHTML+
  '<div id="bookwrap"><div id="book">'+''.join(P)+'</div></div>'
  '<div id="bar"><button id="prev" aria-label="Previous page">‹ Prev</button><span class="pn" id="pn">1 / 26</span><button id="nxt" aria-label="Next page">Next ›</button><span class="sep hide-s"></span>'
  +nav(0,'Cover')+nav(1,'About')+nav(4,'Contents')+nav(5,'Students')+nav(15,'Faculty')+nav(17,'Department')+nav(24,'Team')
- +'<span class="sep hide-s"></span><button data-sheet="stu">Achievements</button><button data-sheet="bc">Blockchain</button><button id="gd">Mascot guide: on</button><button id="vx">Voice: on</button><select id="vs" class="hide-s" aria-label="Adhi voice"></select><button id="fs" class="hide-s">Fullscreen</button></div>'
+ +'<span class="sep hide-s"></span><button data-sheet="stu">Achievements</button><button data-sheet="bc">Blockchain</button><button id="gd">Mascot guide: on</button><button id="vx">Voice: on</button><button id="fs" class="hide-s">Fullscreen</button></div>'
  '<div id="hint">Drag a page corner or use ← → to flip · tap photos to meet the stories</div>')
 FONTS=('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Unbounded:wght@700;800;900&display=swap">' if MODE=='web' else '<link rel="stylesheet" href="fonts/fonts.css">')
 LIB=('<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>' if MODE=='web' else '<script src="vendor/page-flip.browser.js"></script>')

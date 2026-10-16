@@ -24,13 +24,8 @@ function vscore(v){const n=v.name+' '+v.lang;let s=0;
   if(/espeak|compact|novelty|whisper|bubbles|zarvox|trinoids|bells|boing|cellos|organ|good news|bad news|jester|albert|fred|junior|kathy|ralph|superstar/i.test(n))s-=60;
   return s}
 function fillVoices(){
-  const sel=$('#vs'),all=vlist();if(!all.length||!sel)return;
-  const preferred=all.find(v=>/UK English Female/i.test(v.name))||all.find(v=>/^en-GB/i.test(v.lang)&&/female|woman|hazel/i.test(v.name))||all[0],vs=[preferred];
-  let saved=null;try{saved=localStorage.getItem('adhiVoice')}catch(e){}
-  const zira=vs.find(v=>/zira/i.test(v.name));const keep=vs.find(v=>v.name===saved);VOX.voice=zira||keep||vs[0];
-  sel.innerHTML=vs.slice(0,14).map(v=>'<option value="'+v.name.replace(/"/g,'')+'">'+v.name.replace(/^(Microsoft|Google)\s/,'').replace(/ Online \(Natural\)/,' (Natural)')+' · '+v.lang+'</option>').join('');
-  if(!vs.slice(0,14).includes(VOX.voice))VOX.voice=vs[0];
-  sel.value=VOX.voice.name.replace(/"/g,'');
+  const all=vlist();if(!all.length)return;
+  VOX.voice=all.find(v=>/UK English Female/i.test(v.name))||all.find(v=>/^en-GB/i.test(v.lang)&&/female|woman|hazel/i.test(v.name))||all[0];
 }
 function stopVoice(){vtok++;if(TTS)speechSynthesis.cancel();$$('.stage.talk').forEach(s=>s.classList.remove('talk'))}
 function say2(st,text,id){
@@ -276,8 +271,7 @@ function ctrls(){
     if(guide)runSpread();else{tok++;allReset()}};
   g.textContent='Mascot guide: '+(guide?'on':'off');
   $('#vx').onclick=()=>{VOX.on=!VOX.on;$('#vx').classList.toggle('on',VOX.on);$('#vx').textContent='Voice: '+(VOX.on?'on':'off');if(!VOX.on)stopVoice()};
-  $('#vs').onchange=e=>{const v=vlist().find(x=>x.name===e.target.value);if(!v)return;VOX.voice=v;try{localStorage.setItem('adhiVoice',v.name)}catch(er){}if(guide){runSpread()}};
-  if(TTS){fillVoices();speechSynthesis.onvoiceschanged=fillVoices}else{$('#vx').style.display='none';$('#vs').style.display='none'}
+  if(TTS){fillVoices();speechSynthesis.onvoiceschanged=fillVoices}else{$('#vx').style.display='none'}
   $('#vx').classList.add('on');
   $('#fs').onclick=()=>{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()};
   addEventListener('keydown',e=>{if(!opened)return;if(e.key==='ArrowRight')pf.flipNext();else if(e.key==='ArrowLeft')pf.flipPrev();else if(e.key==='g')g.click();});
