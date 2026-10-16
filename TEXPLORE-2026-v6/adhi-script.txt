@@ -59,8 +59,7 @@ p15-h1	Road to SIH. Road to SIH
 p15-h2	A packed hall. Full house
 p15-h3	Club members. The GDG team
 p16-intro0	Page 16. Our faculty set the pace.
-p16-intro1	Doctor V. Karthick was recognised at College Day 2026 for commendable overall performance in teaching, evaluation, research, publication and other professional pursuits (2025–26).
-p16-h0	Doctor V. Karthick: Faculty of the Year. Recognised for teaching, evaluation, research and publication.
+p16-h0	Doctor V. Karthik was named Faculty of the Year 2025, recognised for teaching, evaluation, research and publication.
 p16-h1	Faculty learn Agentic AI. Empowering faculty to build the next generation of autonomous AI systems, by the TCS CoE in AI.
 p17-intro0	Page 17. Faculty empowerment programmes and their highlights.
 p17-h0	GenAI and Applied AI, with HCL GUVI. Faculty programme on Generative AI and Applied AI, 22–24 June 2026.

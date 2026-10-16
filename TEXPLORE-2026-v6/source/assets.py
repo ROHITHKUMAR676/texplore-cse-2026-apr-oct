@@ -123,6 +123,9 @@ for i in range(1,21):
     A['ac%d'%i]=jpg(Image.open(DM+f),800,72)
 _h=Image.open(U+'HoD-photo-Dr-J-Manoranjini.png').convert('RGB'); _h=_h.resize((_h.width*4,_h.height*4),Image.LANCZOS).filter(ImageFilter.UnsharpMask(2,60,3))
 A['hod']=jpg(_h,720,88)
+_k=Image.open(U+'image.png').convert('RGB')
+_k=_k.crop((0,0,_k.width,int(_k.height*0.81)))
+A['karthik']=jpg(_k,720,88)
 FC={'fc1':'../assets/originals/faculty-coordinator-1-Karthikeyan-N.jpg','fc2':'../assets/originals/faculty-coordinator-2-Balachandar-J.png','fc3':'../assets/originals/faculty-coordinator-3-Poornima-A.jpg','fc4':'../assets/originals/faculty-coordinator-4-Jayapradha.png'}
 for k,f in FC.items(): A[k]=jpg(Image.open(f),560,84)
 SC={'sc1':'../assets/originals/student-coordinator-1-Rohith-Kumar-S.png','sc2':'../assets/originals/student-coordinator-2-Sarveshvaran-D.png','sc3':'../assets/originals/student-coordinator-3-Gowtham-S.png'}
