@@ -337,6 +337,7 @@ STU=('<h2>Student Achievement Record</h2><p class="shlead">Every entry from the 
  +'</div><h3><s style="background:#ff3dd2"></s>National rankings</h3><div class="grid">'
  +acard(['ac6'],'AICCI National Startup Summit 2026','Top 10',F4,'AICCI')
  +acard(['ac4','ac5'],'CIH Hackathon’26','13th Place',F4,'Rathinam Technical Campus','24-hour hackathon.')
+ +acard([],'VIT Origin’26 Hackathon','Top 15','Team HacksOn: Sarveshvaran D, Gowtham S','VIT Chennai','Top 15 among 218 teams in the offline round.')
  +'</div><h3><s style="background:#8a5cff"></s>Participation &amp; certificates</h3><div class="grid">'
  +acard(['ac7','ac8'],'INFOGRAM-26','Certificate of Excellence','Sam Devaraja J, Santhosh Priyan T N','C. Abdul Hakeem College of Engineering and Technology (CAHCET)','National level technical symposium by the Department of IT; hackathon participation.')
  +acard(['ac9'],'Workshop cum Hackathon','Participation','Sam Devaraja J, Santhosh Priyan T N','KCG College of Technology, Chennai','Organised with CADD Centre.')

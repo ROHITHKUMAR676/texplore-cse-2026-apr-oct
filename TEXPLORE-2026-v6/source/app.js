@@ -30,7 +30,7 @@ function fillVoices(){
 function stopVoice(){vtok++;if(TTS)speechSynthesis.cancel();$$('.stage.talk').forEach(s=>s.classList.remove('talk'))}
 function say2(st,text,id){
   return new Promise(resolve=>{
-    if(!VOX.on||!TTS||!VOX.voice)return resolve(false);
+    if(!VOX.on||!TTS)return resolve(false);
     const my=++vtok,stg=$('.stage',st.pg);let fin=false;
     const done=ok=>{if(fin)return;fin=true;clearTimeout(sf);stg.classList.remove('talk');resolve(ok)};
     const sf=setTimeout(()=>{if(TTS)speechSynthesis.cancel();done(true)},45000);
@@ -39,8 +39,22 @@ function say2(st,text,id){
       stg.classList.add('talk');
       const next=()=>{
         if(my!==vtok)return done(true);if(i>=sents.length)return done(true);
-        const u=new SpeechSynthesisUtterance(sents[i++].trim());u.voice=VOX.voice;u.lang=VOX.voice.lang;u.rate=.96;u.pitch=.9;u.volume=1;
-        u.onend=()=>setTimeout(next,160);u.onerror=()=>done(true);speechSynthesis.speak(u);};
+        const sentence=sents[i++].trim();
+        const enqueue=(preferred=true)=>{
+          if(my!==vtok)return done(true);
+          const u=new SpeechSynthesisUtterance(sentence);
+          if(preferred&&VOX.voice)u.voice=VOX.voice;
+          u.lang=(preferred&&VOX.voice?.lang)||'en-IN';u.rate=.96;u.pitch=.9;u.volume=1;
+          u.onend=()=>setTimeout(next,160);
+          u.onerror=()=>{
+            if(my!==vtok)return done(true);
+            if(preferred&&VOX.voice){VOX.voice=null;enqueue(false)}else done(true);
+          };
+          try{speechSynthesis.resume();speechSynthesis.speak(u)}catch(e){
+            if(preferred&&VOX.voice){VOX.voice=null;enqueue(false)}else done(true);
+          }
+        };
+        enqueue();};
       next();
     };
     if(window.ADHI_AUDIO){const a=new Audio('audio/'+id+'.mp3');let ok=false;
